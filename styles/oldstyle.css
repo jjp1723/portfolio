@@ -1,0 +1,390 @@
+/* ----- Stylesheet ----- */
+
+
+
+/* General */
+
+body
+{
+    background-image: linear-gradient(darkgray, gray);
+}
+
+h1
+{
+    font-size: 200%;
+}
+
+h2
+{
+    font-size: 200%;
+}
+
+footer
+{
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+/* Header */
+
+header
+{
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+}
+
+nav
+{
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-areas:
+        "navAB  navGL"
+        "navRS   navCT";
+    margin: 0 auto;
+}
+
+@media only screen and (min-width:1280px)
+{
+    nav
+    {
+        grid-template-areas:
+            "navAB  navGL   navRS   navCT";
+    }
+}
+
+@media only screen and (max-width:680px)
+{
+    nav
+    {
+        grid-template-areas:
+            "navAB"
+            "navGL"
+            "navRS"
+            "navCT";
+    }
+}
+
+.navAbout
+{
+    grid-area: navAB;
+}
+
+.navGallery
+{
+    grid-area: navGL;
+}
+
+.navResume
+{
+    grid-area: navRS;
+}
+
+.navContact
+{
+    grid-area: navCT;
+}
+
+nav a
+{
+    display: block;
+    background-color: #FA6602;
+    color: black !important;
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-size: 50px;
+    transition: transform 0.2s ease-in;
+}
+
+nav a:hover
+{
+    background-color: black !important;
+    color: #FA6602 !important;
+    transform:scale(1.2);
+}
+
+nav a.active
+{
+    background-color: red !important;
+    color: white !important;
+}
+
+.nametag
+{
+    font-size: 200%;
+    color: white;
+    background-color: black;
+    margin: auto;
+    width: 60%;
+    margin-top: 1em;
+    padding: 1px 20px 20px 20px;
+}
+
+
+
+/* About Me */
+
+#about
+{
+    display: grid;
+    justify-items: center;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas:
+        "about"
+        "photo"
+        "bio";
+    background-color: #FA6602;
+    color: black;
+    border: 3px solid black;
+}
+
+@media only screen and (min-width:1280px)
+{
+    #about
+    {
+        grid-template-areas:
+            "about  about" 
+            "photo  bio";
+    }
+}
+
+#aboutLabel
+{
+    grid-area: about;
+}
+
+.about
+{
+    flex: 0 1 590px;
+    max-width: 590px;
+}
+
+#bio
+{
+    display: block;
+    background-color: #FA6602;
+    color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    grid-area: bio;
+}
+
+#bio p
+{
+    font-size: 150%;
+}
+
+#photo
+{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    grid-area: photo;
+}
+
+#photo img
+{
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    outline-offset: -10px;
+}
+
+
+
+/* Gallery */
+
+#gallery
+{
+    display: grid;
+    justify-items: center;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    grid-template-areas:
+        "gallery"
+        "potato"
+        "dungeon"
+        "battleship"
+        "monster"
+        "alien";
+    background-color: #FA6602;
+    color: black;
+    border: 3px solid black;
+}
+
+@media only screen and (min-width:1280px)
+{
+    #gallery
+    {
+        padding: 0px;
+        grid-template-areas:
+            "gallery    gallery" 
+            "potato     dungeon"
+            "battleship monster"
+            "alien      alien";
+    }
+}
+
+#galleryLabel
+{
+    grid-area: gallery;
+}
+
+.gallery
+{
+    padding-bottom: 15px;
+    flex: 0 1 400px;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.gallery h3
+{
+    text-align: center;
+}
+
+.gallery img
+{
+    width: 600px;
+    max-width: 100%;
+}
+
+#potato
+{
+    grid-area: potato;
+}
+
+#dungeon
+{
+    grid-area: dungeon;
+}
+
+#battleship
+{
+    grid-area: battleship;
+}
+
+#monster
+{
+    grid-area: monster;
+}
+
+#alien
+{
+    grid-area: alien;
+}
+
+
+
+/* Gallery Pages */
+#gamePage
+{
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #FA6602;
+    color: black;
+    border: 3px solid black;
+}
+
+.infoPhoto
+{
+    width: 600px;
+    max-width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infoVideo
+{
+    width: 600px;
+    max-width: 50%;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label
+{
+    text-align: center;
+}
+
+
+
+/* Resume */
+
+#resume
+{
+    text-align: center;
+    font-size: 200%;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    background-color: #FA6602;
+    color: black;
+    border: 3px solid black;
+}
+
+#resume h2
+{
+    font-size: 100%;
+}
+
+
+
+/* Contact */
+
+#contact
+{
+    text-align: center;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    background-color: #FA6602;
+    color: black;
+    border: 3px solid black;
+}
+
+
+
+/* Links */
+
+a:link
+{
+    color: yellow;
+}
+
+a:visited
+{
+    color:  gray;
+}
+
+a:focus
+{
+    color: black;
+}
+
+a:hover
+{
+    color: red;
+}
+
+a:active
+{
+    color: black;
+}
